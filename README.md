@@ -5,7 +5,7 @@ A simple php escaping class.
 ---
 
 #### Installing
-**Escpr** is a pretty simple class. Simply download a zip or clone the repository in the root of your project. Then load it:
+**Escpr** is a pretty simple class. Just download a zip or clone the repository in the root of your project. Then load it:
 
 ```php
 <?php
@@ -14,7 +14,7 @@ using \Escpr\Escpr;
 ```
 
 #### Escaping stuff
-...is pretty easy. Just use the one and only publicly available method - *escape()*.
+...is pretty easy. Use the one and only publicly available method - *escape()*.
 
 Here's how:
 
