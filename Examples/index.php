@@ -1,5 +1,7 @@
 <?php
 
+ini_set('display_errors', 1);
+
 /**
  * The following are some example usages of the Escpr class.
  * =========================================================
@@ -20,10 +22,10 @@
  * Start escaping.
  */
 
-require_once 'vendor/autoload.php';
+require_once '../vendor/autoload.php';
 
 use Escpr\Escpr;
-use Escpr\User;
+use Escpr\Examples\User;
 
 // Escaping a strings.
 
