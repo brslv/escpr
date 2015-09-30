@@ -1,10 +1,10 @@
 # Escpr
 A simple php escaping class.
 
-### How to use Escpr:
----
+## How to use Escpr:
 
 #### Installing
+
 **Escpr** is a pretty simple class. Just download a zip or clone the repository in the root of your project. Then load it:
 
 ```php
@@ -14,6 +14,7 @@ using \Escpr\Escpr;
 ```
 
 #### Escaping stuff
+
 ...is pretty easy. Use the one and only publicly available method - *escape()*.
 
 Here's how:
@@ -22,13 +23,14 @@ Here's how:
 Espr::escape($anything); // anything can be, well, anything.
 ```
 
-### How Escpr works
----
+## How Escpr works
+
 It traverses arrays and objet's properties' values, until it finds a string. **Escpr** escapes that string and continues to traverse.
 
 NOTE: *Escpr works by reference, which means it escapes directly the passed argument's value and returns nothing.*
 
 #### The stdClass hack
+
 There's a thing you should keep in mind, though. **Espr** does not escape __stdClass__ objects. But there's a workaround.
 * First, cast the stdClass object to array
 * Second, escape that array with Escpr::escape().
@@ -47,6 +49,10 @@ $stdClassObject = (object) $stdClassObjectAsArray; // cast the escaped array bac
 
 echo $stdClassObject->escapeMe . '<br />'; // print the escaped value.
 ```
+
+## Contributing
+
+**Escpr** is distributed under the MIT license.
 
 More examples in the *Examples/* folder.
 
