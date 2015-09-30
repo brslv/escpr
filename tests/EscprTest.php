@@ -16,11 +16,7 @@ class EscprTest extends PHPUnit_Framework_TestCase
     {
         $string = '<b>Test</b>';
         
-        // When Escpr escapes strings, it does not do that by reference.
-        // So Escpr always returns new string.
-        // In all other complex types (arrays, objects, arrays of objects, etc.),
-        // Escpr works by reference (does not return a value).
-        $string = Escpr::escape($string);
+        Escpr::escape($string);
         
         $this->assertEquals('&lt;b&gt;Test&lt;/b&gt;', $string);
     }
@@ -29,8 +25,6 @@ class EscprTest extends PHPUnit_Framework_TestCase
     {
         $arrayOfString = ['<b>Test</b>'];
         
-        // Here Escpr works by reference on the original
-        // $arrayOfStrings array.
         Escpr::escape($arrayOfString);
         
         $this->assertEquals(['&lt;b&gt;Test&lt;/b&gt;'], $arrayOfString);
