@@ -14,7 +14,7 @@ using \Escpr\Escpr;
 ```
 
 #### Escaping stuff
-...is pretty easy. Just use the one and only publicly available method - escape().
+...is pretty easy. Just use the one and only publicly available method - *escape()*.
 
 Here's how:
 
@@ -26,7 +26,7 @@ Espr::escape($anything); // anything can be, well, anything.
 ---
 It traverses arrays and objet's properties' values, until it finds a string. **Escpr** escapes that string and continues to traverse.
 
-NOTE: __Escpr works by reference, which means it escapes directly the passed argument's value and returns nothing.__
+NOTE: *Escpr works by reference, which means it escapes directly the passed argument's value and returns nothing.*
 
 #### The stdClass hack
 There's a thing you should keep in mind, though. **Espr** does not escape __stdClass__ objects. But there's a workaround.
@@ -48,6 +48,6 @@ $stdClassObject = (object) $stdClassObjectAsArray; // cast the escaped array bac
 echo $stdClassObject->escapeMe . '<br />'; // print the escaped value.
 ```
 
-More examples in the Examples/ folder.
+More examples in the *Examples/* folder.
 
 Happy escaping!
